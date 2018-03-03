@@ -8,6 +8,8 @@ contract StakePool
 
 contract SecurityDAO {
 
+// TODO: add events
+
   struct auditor {
     address addr;
     string  github_profile; // link
