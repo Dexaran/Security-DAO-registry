@@ -22,8 +22,12 @@ The main task of an auditor is to review a code of smart-contracts and submit [r
 
 Both, managers and auditors are paid from Callisto treasury.
 
-The audit process will be managed through github so that it will be transparently available for everyone. A smart-contract developer should open an [issue](https://github.com/Dexaran/Security-DAO/issues) to submit his smart-contract for auditors review. Then the manager will verify security audit request details and mark the issue as *approved*. The manager should not mark dummy requests, requests that aim to spam the security audit queue or any requests that does not met coding standard requirements. After that, **every** auditor can start reviewing the code.
+The audit process will be managed through github so that it will be transparently available for everyone. A smart-contract developer should open an [issue](https://github.com/Dexaran/Security-DAO/issues) to submit his smart-contract for auditors review. Then the manager will verify security audit request details and mark the issue as *approved*. The manager should not mark dummy requests, requests that aim to spam the security audit queue or any requests that does not met coding standard requirements. After that, **every** auditor can start reviewing the code. 
+
+An auditor with a willingness to participate in the code review of a certain contract must create a [private gist](https://gist.github.com/) and send gist URL to the corresponding issue manager by [email](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L14). E-mail address of each manager or auditor is transparently available at the smart-contract of this organization.
 
 ## Rewards
 
-Managers are always paid regardless of their activity.
+Managers are always paid regardless of their activity, but they are controlled by Cold Stakers voting (or security department owner manual control during the debugging stage). Average community member can not know details and specifics of security auditing process, thus Cold Stakers can not verify or control the activity of security auditors. This is the purpose of security audit organization managers. We rely on an assumption that average community member can verify managers activity and determine whether a manager is a malicious actor or not. 
+
+If it was noticed that the manager does not act as he should or does not work for significant amount of time without any explanation, then he must be dismissed via the Cold Stakers voting (or security department owner manual control during the debugging stage) and another manager must be elected.
