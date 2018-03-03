@@ -38,25 +38,25 @@ If it was noticed that the manager does not act as he should or does not work fo
 
 We have 10 auditors with the corresponding "karma" amount:
 
-- 1. Alice (14788)
+1. Alice (14788)
 
-- 2. Bob (12000)
+2. Bob (12000)
 
-- 3. Carol (11700)
+3. Carol (11700)
 
-- 4. Dex (11699)
+4. Dex (11699)
 
-- 5. Elon (11400)
+5. Elon (11400)
 
-- 6. Fabian (11300)
+6. Fabian (11300)
 
-- 7. Gabriele (7304)
+7. Gabriele (7304)
 
-- 8. HODLer (7200)
+8. HODLer (7200)
 
-- 9. Iggy (3323)
+9. Iggy (3323)
 
-- 10. Jack (200)
+10. Jack (200)
 
 Callisto treasury allocates **3000 CLO**/month for auditing department payments for example. Assume security auditor salary **$10,000**/month and 1 CLO = $10. With such parameters we will have top-3 auditors paid: Alice, Bob and Carol.
 
