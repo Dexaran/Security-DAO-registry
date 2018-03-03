@@ -1,6 +1,6 @@
 # Ethereum Commonwealth smart-contract audit DAO.
 
-NOTE: This is the very first implementation. It requires more testing/debugging before use.
+NOTE: This is the very first implementation. It requires more testing/debugging before use. Ethereum Commonwealth will use this contract as a public registry of smart-contract audits. Decentralized governance of the security-auditing organization will only make sense after the *second planned hardfork of Callisto Network* (11 Nov, 2019)
 
 The following describes a structure and workflow of Ethereum Commonwealth ETC & CLO smart-contract auditing department. ( read [Callisto whitepaper](https://drive.google.com/file/d/16sW_0YajCedBdLvr9jmgJqE9L-SzuYKq/view) for more information )
 
