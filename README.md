@@ -28,6 +28,40 @@ An auditor with a willingness to participate in the code review of a certain con
 
 ## Rewards
 
-Managers are always paid regardless of their activity, but they are controlled by Cold Stakers voting (or security department owner manual control during the debugging stage). Average community member can not know details and specifics of security auditing process, thus Cold Stakers can not verify or control the activity of security auditors. This is the purpose of security audit organization managers. We rely on an assumption that average community member can verify managers activity and determine whether a manager is a malicious actor or not. 
+**Managers** are always paid regardless of their activity, but they are controlled by Cold Stakers voting (or security department owner manual control during the debugging stage). Average community member can not know details and specifics of security auditing process, thus Cold Stakers can not verify or control the activity of security auditors. This is the purpose of security audit organization managers. We rely on an assumption that average community member can verify managers activity and determine whether a manager is a malicious actor or not. 
 
 If it was noticed that the manager does not act as he should or does not work for significant amount of time without any explanation, then he must be dismissed via the Cold Stakers voting (or security department owner manual control during the debugging stage) and another manager must be elected.
+
+**Auditors** are paid depending on their activity summary. An auditor is marked as `active` when he is submitting a report. After a certain amount of time (yet under consideration) the `active` status is removed. Top active auditors with the highest amount of "karma" are paid depending on budget.
+
+*Example:*
+
+We have 10 auditors with the corresponding "karma" amount:
+
+- 1. Alice (14788)
+
+- 2. Bob (12000)
+
+- 3. Carol (11700)
+
+- 4. Dex (11699)
+
+- 5. Elon (11400)
+
+- 6. Fabian (11300)
+
+- 7. Gabriele (7304)
+
+- 8. HODLer (7200)
+
+- 9. Iggy (3323)
+
+- 10. Jack (200)
+
+Callisto treasury allocates **3000 CLO**/month for auditing department payments for example. Assume security auditor salary **$10,000**/month and 1 CLO = $10. With such parameters we will have top-3 auditors paid: Alice, Bob and Carol.
+
+Let's pretend that the ecosystem has grown. The amount of smart-contract developers has grown as well alongside with CLO price. At 1 CLO = $20 we will have 20 * 3000 = $60,000/month which allows to pay 6 security auditors now: Alice, Bob, Carol, Dex, Elon, Fabian.
+
+NOTE: The described model allows an auditor to leave at any time. For example, if Alice will be on vocation for 1 month, then she will not be marked as `active` during this month and only top-6 active auditors will receive salaries: Bob, Carol, Dex, Elon, Fabian, Gabriele.
+
+It should be noted that even a beginner is incentivised to submit audit reports and review the codes for the sake of karma.
