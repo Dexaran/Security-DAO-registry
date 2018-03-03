@@ -6,7 +6,7 @@ Solidity smart-contract source code: (SecurityDAO.sol](https://github.com/Dexara
 
 The following describes a structure and workflow of Ethereum Commonwealth ETC & CLO smart-contract auditing department. ( read [Callisto whitepaper](https://drive.google.com/file/d/16sW_0YajCedBdLvr9jmgJqE9L-SzuYKq/view) for more information )
 
-## Abstract
+# Abstract
 
 Smart-contract security is critical for most blockchain DApp development platforms. The main goal of this organization is to improve the security of Ethereum Classic and Callisto ecosystem by providing free security audits for smart-contract developers.
 
@@ -14,7 +14,7 @@ We do not rely on blockchain technology to verify smart-contracts. We only use i
 
 It should be noted that smart-contract auditing organization is scalable which means that it allows to hire, manage and pay security audits of any smart-contracts written in any language depending on demand.
 
-## Structure
+# Structure
 
 There are two types of participants in the described organization: [managers](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L17) and [auditors](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L11-L18).
 
@@ -28,7 +28,7 @@ The audit process will be managed through github so that it will be transparentl
 
 An auditor with a willingness to participate in the code review of a certain contract must create a [private gist](https://gist.github.com/) and send gist URL to the corresponding issue manager by [email](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L14). E-mail address of each manager or auditor is transparently available at the smart-contract of this organization.
 
-## Rewards
+# Rewards
 
 **Managers** are always paid regardless of their activity, but they are controlled by Cold Stakers voting (or security department owner manual control during the debugging stage). Average community member can not know details and specifics of security auditing process, thus Cold Stakers can not verify or control the activity of security auditors. This is the purpose of security audit organization managers. We rely on an assumption that average community member can verify managers activity and determine whether a manager is a malicious actor or not. 
 
@@ -67,3 +67,6 @@ Let's pretend that the ecosystem has grown. The amount of smart-contract develop
 NOTE: The described model allows an auditor to leave at any time. For example, if Alice will be on vocation for 1 month, then she will not be marked as `active` during this month and only top-6 active auditors will receive salaries: Bob, Carol, Dex, Elon, Fabian, Gabriele.
 
 It should be noted that even a beginner is incentivised to submit audit reports and review the codes for the sake of karma.
+
+We must remember that smart contract systems can be of different complexity. As the result, it is decided to use the **length of a bytecode of audited smart-contracts compiled with `0.4.20+commit.3155dd80` compiler without optimization** as a measure of contract complexity and auditors karma coeffitient.
+
