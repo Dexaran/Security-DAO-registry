@@ -70,3 +70,28 @@ It should be noted that even a beginner is incentivised to submit audit reports 
 
 We must remember that smart contract systems can be of different complexity. As the result, it is decided to use the **length of a bytecode of audited smart-contracts compiled with `0.4.20+commit.3155dd80` compiler without optimization** as a measure of contract complexity and auditors karma coeffitient calculations.
 
+## Step by step interaction with auditing registry
+
+- A smart-contract developer submits an [audit request issue](https://github.com/Dexaran/Security-DAO-registry/issues).
+
+- Auditing organization manager verifies the auditing request and sets an `approved` label.
+
+- Auditors are picking the issue. In most cases 3 code reviewers is a sufficient number. In case of smart-contract systems of high complexity it may require more code reviewers.
+
+- A manager replaces `approved` label with `in-progress` label. After that, the issue is still available for picking but submitting audit reports for this issue will not affect the "active" status of an auditor. Thus, reviewing the contract code will still make sense for beginners for the sake of "karma" increase and earning experience but we can avoid a situation when the whole team is working on a single contract with other audit requests being in pending.
+
+- Auditor is creating a private gist. Then he submits a Keccak-256 hash of gist link to the contract by the [submit_report](https://github.com/Dexaran/Security-DAO-registry/blob/master/SecurityDAO.sol#L106) function. Example: the gist link is `https://gist.github.com/user/1234abc1234abc`. The hash of this gist that needs to be submitted to the contract is `026c43a23ba6a331739fe8d066b9bd1a6eac53982358aa3ff7cb5d0301712d2d`.
+
+- Auditor delivers the private gist link (report) to the manager off-chain. Auditor must not publish the report gist link which is preimage of the gist hash that is submitted to the contract.
+
+- Once the manager has received a link to the private gist, the auditors can start reviewing the code and reporting findings in their private gists.
+
+- Once every auditor finished, a manager must compare reports.
+
+- If one of the auditors has not described the vulnerability that others have identified, then the manager must assign him a penalty, increasing the "errors" property of report.
+
+- Manager [signs](https://github.com/Dexaran/Security-DAO-registry/blob/master/SecurityDAO.sol#L117) reports.
+
+- Manager [reveals](https://github.com/Dexaran/Security-DAO-registry/blob/master/SecurityDAO.sol#L128) reports. Once reports are revealed the gist links are publicly accessible so that everyone can observe the work of managers and auditors.
+
+- At the moment of audit report revealing the report author receives karma bonuses, error penalties and `active` status.
