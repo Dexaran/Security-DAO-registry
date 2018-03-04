@@ -142,6 +142,81 @@ contract SecurityDAO {
       return ( auditors[_auditor].karma / auditors[_auditor].error_coefficient );
   }
   
+  //------------------- DEBUGGING FUNCTIONS ------------------------------------------
+  
+  
+  address public owner;
+  uint256 public debug_autodisable = 6500000; // Block number.
+  
+  function debug() public constant returns (bool)
+  {
+      return block.number > debug_autodisable;
+  }
+  
+  modifier only_owner
+  {
+      require(msg.sender == owner);
+      _;
+  }
+  
+  modifier only_debug
+  {
+      _;
+      assert(debug());
+  }
+  
+  /*struct auditor {
+    address addr;
+    string  github_profile; // link
+    string  email_address;  // email
+    uint256 karma;
+    uint256 error_coefficient;
+    bool    manager;
+  }*/
+  
+  function configure_auditor(address _addr, string _github, string _email, uint256 _karma, uint256 _error, bool _manager) only_debug only_owner
+  {
+      auditors[_addr].addr              = _addr;
+      auditors[_addr].github_profile    = _github;
+      auditors[_addr].email_address     = _email;
+      auditors[_addr].karma             = _karma;
+      auditors[_addr].error_coefficient = _error;
+      auditors[_addr].manager           = _manager;
+  }
+  
+  
+  
+  /*struct report {
+      string    gist_link;  // Assigned by creator. 
+      string    gist_hash;  // Assigned by creator. 
+      address   author;     // Assigned by creator. 
+      
+      uint256   timestamp;  // Assigned automatically.
+      bool      revealed;   // Assigned automatically.
+      
+      uint256   errors;           // Assigned by manager. 
+      uint256   bytecode_length;  // Assigned by manager. 
+      address[] signers;          // Assigned by manager.
+  }*/
+  
+  function configure_report(uint _id, string _gist_link, string _gist_hash, address _author, uint256 _errors, uint256 _bytecode_length) only_debug only_owner
+  {
+      reports[_id].gist_link       = _gist_link;
+      reports[_id].gist_hash       = _gist_hash;
+      reports[_id].author          = _author;
+      reports[_id].errors          = _errors;
+      reports[_id].bytecode_length = _bytecode_length;
+  }
+  
+  function add_signer(uint _id, address _signer) only_debug only_owner
+  {
+      reports[_id].signers.push(_signer);
+  }
+  
+  function reset_signers(uint _id) only_debug only_owner
+  {
+      delete reports[_id].signers;
+  }
 
 // TODO: rollback actions of malitious managers through voting.
 // TODO: debugging functions.
