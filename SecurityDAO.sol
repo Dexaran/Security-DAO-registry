@@ -48,6 +48,7 @@ contract SecurityDAO {
   
   uint256 public total_reports;
   uint256 public election_duration = 25 days;
+  uint256 public inactivity_period = 15 days;
   address public stake_pool;
   
   function become_manager()
@@ -141,6 +142,11 @@ contract SecurityDAO {
       {
           auditors[reports[_report_id].author].last_contribution = now;
       }
+  }
+  
+  function active(address _auditor) constant returns (bool)
+  {
+      return ( now - auditors[_auditor].last_contribution ) > inactivity_period;
   }
   
   function getKarma(address _auditor) constant returns (uint256)
