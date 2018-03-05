@@ -16,6 +16,7 @@ contract SecurityDAO {
     string  email_address;  // email
     uint256 karma;
     uint256 error_coefficient;
+    uint256 last_contribution;
     bool    manager;
   }
   
@@ -135,6 +136,11 @@ contract SecurityDAO {
       reports[_report_id].gist_link = _gist_link;
       auditors[reports[_report_id].author].error_coefficient += reports[_report_id].errors;
       auditors[reports[_report_id].author].karma += reports[_report_id].bytecode_length;
+      
+      if(auditors[msg.sender].manager)
+      {
+          auditors[reports[_report_id].author].last_contribution = now;
+      }
   }
   
   function getKarma(address _auditor) constant returns (uint256)
