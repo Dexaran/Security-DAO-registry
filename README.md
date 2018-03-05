@@ -68,7 +68,7 @@ NOTE: The described model allows an auditor to leave at any time. For example, i
 
 It should be noted that even a beginner is incentivised to submit audit reports and review the codes for the sake of karma.
 
-We must remember that smart contract systems can be of different complexity. As the result, it is decided to use the **length of a bytecode of audited smart-contracts compiled with `0.4.20+commit.3155dd80` compiler without optimization** as a measure of contract complexity and auditors karma coeffitient calculations.
+We must keep in mind that smart contract systems can be of different complexity. As the result, it is decided to use the **length of a bytecode of audited smart-contracts compiled with `0.4.20+commit.3155dd80` compiler without optimization** as a measure of contract complexity and auditors karma coeffitient calculations.
 
 ## Step by step interaction with auditing registry
 
