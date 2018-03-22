@@ -22,7 +22,7 @@ There are two types of participants in the described organization: [managers](ht
 
 The main task of a manager is to control and verify the work of the auditors.
 
-The main task of an auditor is to review a code of smart-contracts and submit [reports](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L29-L40). Auditors receive [karma](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L15) for reviewing contracts. They also receive [penalties](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L16) for making mistakes. The statistic reflects each auditors results and determines their reward.
+The main task of an auditor is to review a code of smart-contracts and submit [reports](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L29-L40). Auditors receive [karma](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L15) for reviewing contracts. They also receive [penalties](https://github.com/Dexaran/Security-DAO-registry/blob/master/SecurityDAO.sol#L17) for making mistakes. The statistic reflects each auditors results and determines their reward.
 
 Both, managers and auditors are paid from Callisto treasury.
 
