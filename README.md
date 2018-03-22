@@ -16,6 +16,8 @@ It should be noted that smart-contract auditing organization is scalable which m
 
 # Structure
 
+![alt text](https://github.com/Dexaran/Security-DAO-registry/blob/master/Audit_Reg_Flow.png)
+
 There are two types of participants in the described organization: [managers](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L17) and [auditors](https://github.com/Dexaran/Security-DAO/blob/master/SecurityDAO.sol#L11-L18).
 
 The main task of a manager is to control and verify the work of the auditors.
