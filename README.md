@@ -1,4 +1,4 @@
-# Ethereum Commonwealth smart-contract audit DAO.
+# Ethereum Commonwealth smart-contract auditing DAO.
 
 NOTE: This is the very first implementation. It requires more testing/debugging before use. Ethereum Commonwealth will use this contract as a public registry of smart-contract audits. Decentralized governance of the security-auditing organization will only make sense after the *second planned hardfork of Callisto Network* (11 Nov, 2019)
 
